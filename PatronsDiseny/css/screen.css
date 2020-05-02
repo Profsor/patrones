@@ -19,3 +19,14 @@ footer {
   width: 30%;
   display: block;
 }
+
+.imagen_patron {
+  width: 30%;
+  display: block;
+}
+
+a:link{
+	color:orange;
+	text-decoration:underline;
+	font-style:strong;
+}
