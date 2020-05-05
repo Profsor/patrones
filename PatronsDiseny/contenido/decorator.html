@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <title>Patrones de diseño. Singleton</title>
+  <title>Patrones de diseño. Decorator</title>
   <link rel="stylesheet" href="../css/screen.css" type="text/css" media="all">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="author" content="Jordi Codevila">
@@ -57,39 +57,39 @@
 
 
     <p><a href="../index.html">Volver a la pagina principal</a></p>
-    <h1>Singleton</h1>
+    <h1>Decorator</h1>
 
     <h3>Ámbito de uso</h3>
 
-    <p>El objetivo de este patrón es el de garantizar que una clase solo tenga una instancia (o ejemplar) y proporcionar un punto de acceso global a ella.</p>
+    <p>Disponemos de una herramienta para crear interfaces gráﬁcas, que permite añadir funcionalidades como bordes o barras de desplazamiento a cualquier componente de la interfaz.</p>
 
     <h3>Utilidad</h3>
 
-    <p>Es un patrón empleado habitualmente para las conexiones a bases de datos. Otros usos incluyen: logging, caches, thread pools, configuration settings, device driver objects.</p>
+    <p> Se puede utilizar la herencia para extender las responsabilidades de la clase. Si optamos por esta solución, estaríamos haciendo un diseño inflexible (estático), ya que el cliente no puede controlar cuándo y cómo decorar el componente con esa propiedad.</p>
+	<p> Encapsular dentro de otro objeto, llamado Decorador, las nuevas responsabilidades.</p>
 
     <h3>Cómo funciona</h3>
 
-    <p>Este patrón se implementa haciendo privado el constructor de la clase y creando (en la propia clase) un método que crea una instancia del objeto si este no existe. Además, para mejorar su implementación se suele sobreescribir el método clone() para que no permita ser clonado.</p>
+    <li>
+	<ol>Añadir responsabilidades a objetos individuales de forma dinámica y transparente</ol>
+	<ol>Responsabilidades de un objeto pueden ser retiradas</ol>
+	<ol>Cuando la extensión mediante la herencia no es viable</ol>
+	<ol>Hay una necesidad de extender la funcionalidad de una clase, pero no hay razones para extenderlo a través de la herencia.</ol>
+	</li>
 
     <h3>Ejemplo</h3>
 
-    <p>En el siguiente ejemplo se aprecia como la clase SoyUnico dispone de un constructor privado al que solo se podrá acceder mediante un método, en este caso getSingletonInstance() que será
-    el encargado de crear una instancia de esta clase en caso de no haberse creado previamente.</p>
+    <p>Las siguientes imagenes muestran unos ejemplos de este patron</p>
 
-    <img src="../img/singleton-clase.png" alt="Clase Singleton." class="imagen_singleton">
-    <img src="../img/singleton-main.png" alt="Clase main que usa la clase singleton." class="imagen_singleton">
-    <img src="../img/singleton-resultado.png" alt="Código resultante al aplicar la clase singleton." class="imagen_singleton">
-
-    <p>Por último sobreescribimos el método clone:</p>
-
-    <img src="../img/singleton-clone.png" alt="Sobreescritura del método clone." class="imagen_singleton">
-    <img src="../img/singleton-clone-main.png" alt="Intento de clonar nuestra clase Singleton." class="imagen_singleton">
-    <img src="../img/singleton-resultado-clone.png" alt="Código resultante al intentar clonar nuestra clase singleton." class="imagen_singleton">
+   <img src="../img/1.png" class="imagen_patron">
+    <img src="../img/2.jpg" class="imagen_patron">
+    <img src="../img/3.png"  class="imagen_patron">
+    
 
 
     <h3>Referencia bibliográfica</h3>
 
-    <p><a href="https://jarroba.com/patron-singleton-en-java-con-ejemplos/">Jarroba, patrón Singleton</a>
+    <p><a href="https://es.wikipedia.org/wiki/Decorator_(patr%C3%B3n_de_dise%C3%B1o)">Wikipedia, patrón Decorator</a>
 
 
 
