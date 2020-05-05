@@ -1,4 +1,11 @@
 
+
+.imagen_template_method {
+  width: 30%;
+  display: block;
+}
+
+
 body {
   margin:0 50px;
   font: 75% "Trebuchet MS", Verdana, sans-serif;
@@ -41,3 +48,4 @@ h3{
   width: 50%;
   display: block;
 }
+

@@ -2,10 +2,12 @@
 <html lang="es">
 
 <head>
-  <title>Patrones de diseño Template Method</title>
+
+  <title>Patrones de diseï¿½oo. Template</title>
   <link rel="stylesheet" href="../css/screen.css" type="text/css" media="all">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="author" content="Jordi Codevila">
+  <meta name="author" content="Alberto">
+
 </head>
 
 <body>
@@ -58,28 +60,52 @@
     <p><a href="../index.html">Volver a la pagina principal</a></p>
     <h1>Template Method</h1>
 
-    <h3>Ámbito de uso</h3>
 
-    <p>El objetivo de este patrón es proporcionar un método que permite que las subclases redefinan parte del método sin rescribirlo.</p>
+  
 
     <h3>Utilidad</h3>
 
-    <p>Este patrón resulta útil en casos en los que podamos implementar en una clase abstracta el código común que será usado por las clases que heredan de ella, permitiéndoles que implementen el comportamiento que varía mediante la reescritura (total o parcial) de determinados métodos.</p>
+    <p>Nace de la necesidad de extender determinados comportamientos dentro de un mismo algoritmo por parte de diferentes entidades. Es decir, diferentes entidades tienen un comportamiento similar pero que difiere en determinados aspectos puntuales en función de la entidad concreta.</p>
 
-    <h3>Ejemplo</h3>
+    <h3>Como funciona</h3>
 
-    <p>El siguiente diagrama UML presenta un ejemplo basado en esta forma de implementación del patrón Template Method:</p>
+    <p></p>
 
-    <img src="../img/template-method-clase.png" alt="Clase Template Method." class="imagen_template_method">
+    <h3>Explicación: </h3>
 
-  <p> En él, una clase Juego define en su método jugar() el comportamiento general de cualquier juego, el juego comienza y cada uno de los jugadores va haciendo su jugada hasta que se cumple una condición que da fin al juego y se muestra el resultado.</p>
-  <p> Estas operaciones se indican mediante métodos abstractos que deben ser implementados por cada juego específico de forma apropiada, como pueden ser el Parchis o el Ajedrez.</p>
+	    <img src="../img/template-method-clase.PNG" alt="Clase 2 Template Method." class="imagen_template_method">
+	    <h3>Main</h3>
+	    <img src="../img/template-method-main.PNG" alt="Main Template Method." class="imagen_template_method">
+		<h4>ClaseAbstracta.java</h4>
+		<img src="../img/template-method-clase-abstracta.PNG" alt="Main Template Method." class="imagen_template_method">
+		<h4>ClaseConcreta1.java</h4>
+		<img src="../img/template-method-clase-conecreta1.PNG" alt="Main Template Method." class="imagen_template_method">
+		<h4>ClaseConcreta2.java</h4>
+		<img src="../img/template-method-clase-conecreta2.PNG" alt="Main Template Method." class="imagen_template_method">
+		<h4>Resultado</h4>
+		<img src="../img/template-method-resultado.PNG" alt="Main Template Method." class="imagen_template_method">
+		
+	 <ul>
+         <li>En ClaseAbstracta se define el método plantilla obtener(), desde el que se llama a dos métodos definidos como abstractos (que serán implementados por las subclases).</li>
+         <li>En ClaseConcreta1 se implementan dichos métodos de forma que uno de ellos devuelve el número entero recibido como parámetro multiplicado por 100, y otro agregándole 10.</li>
+         <li>En ClaseConcreta2 se implementan de modo que lo devuelven multiplicado por 1000 y agregándole 100, respectivamente.</li>
+     </ul>
+
+     <p>En ciertos casos será necesario que algunas subclases sobreescriban determinados métodos de la clase padre para agregar determinadas funcionalidades.</p>
+
+    <p>Por ejemplo, si queremos que ClaseConcreta sobreescriba el método mensaje() con el fin de que se muestre otro texto antes del ya definido en dicho método lo haríamos del siguiente modo:</p>
+
+    <p</p>
+
+    <img src="../img/template-method-clase-conecreta2-sobrescrito.PNG" alt="Clase 2 Template Method." class="imagen_template_method">
 
 
-    <h3>Referencia bibliográfica</h3>
+    <h3>Referencia bibliogrÃ¡fica</h3>
 
-    <p><a href="https://www.ecured.cu/Template_Method">EcuRed, Template Method </a></p>
-    <p><a href="http://tratandodeentenderlo.blogspot.com/2010/10/patrones-de-diseno-template-method.html">Tratando de entenderlo, Template Method </a></p>
+    <p><a href="https://www.adictosaltrabajo.com/2011/10/04/patron-template-method/">Miguel Arlandi, Adictos al trabajo</a>
+    <p><a href="https://informaticapc.com/patrones-de-diseno/template-method.php">Informatica PC</a>
+
+
 
 
   </section>
