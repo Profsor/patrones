@@ -1,3 +1,4 @@
+
 body {
   margin:0 50px;
   font: 75% "Trebuchet MS", Verdana, sans-serif;
@@ -14,19 +15,29 @@ footer {
   filter:alpha(opacity=70);
   clear:both;
 }
-
+body{
+  background-color: #E1C3FA;
+  padding:10px;
+}
+li{
+  font-style: italic;
+}
+#mainmenu{
+  display: block;
+width: 11%;
+ left: auto;
+  background-color: #D098FE;
+}
+h3{
+  background-color: #8A80FF;
+  text-align: center;
+  width: 8%;
+}
 .imagen_singleton {
-  width: 30%;
+  width: 50%;
   display: block;
 }
-
-.imagen_patron {
-  width: 30%;
+.imagen_prototype {
+  width: 50%;
   display: block;
-}
-
-a:link{
-	color:orange;
-	text-decoration:underline;
-	font-style:strong;
 }

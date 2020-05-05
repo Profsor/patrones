@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Patrones de dise�oo. Singleton</title>
+  <link rel="stylesheet" href="../css/screen.css" type="text/css" media="all">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="author" content="Álvaro Rodríguez">
+</head>
+
+<body>
+  <header>Entornos de Desarrollo 2020.
+  </header>
+  <section id="main">
+    <p><a href="../index.html" id="mainmenu">Volver a la pagina principal</a></p>
+    <h1>Prototype</h1>
+
+    <h3>Ámbito de uso</h3>
+
+    <p>Prototype es utilizado cuando:</p>
+    <ul>
+    <li>La creación de nuevos objetos acarrea un alto coste computacional</li>
+    <li>Los objetos a crear tienen o suelen tener atributos que repiten su valor</li>
+    </ul>
+
+    <h3>Utilidad</h3>
+
+    <p>En algunos casos, el coste de crear un objeto nuevo desde 0 es muy elevado, y más aún si luego hay que establecer una gran colección de atributos. En éste contexto sería más conveniente clonar un objeto predeterminado que actúe de prototipo y modificar los valores necesarios para que se ajuste a su nuevo propósito.</p>
+
+    <h3>Cómo funciona</h3>
+
+    <p>Define una interfaz que expone el método necesario para realiar la clonación del objeto. Las clases que puedan ser clonadas implementaran esta interfaz, mientras que las que deseen clonar utilizarán el método definido en la interfaz</p>
+
+    <h3>Ejemplo</h3>
+
+    <p>En el siguiente ejemplo veremos como implementar Prototype. Imagina que tienes una tienda de camisetas, lo que haremos para crear nuevas camisetas será utilizar una similar y modificaremos color, talla y estampado</p>
+
+    <img src="../img/prototype-abstrac.png" alt="Clase Prototype." class="imagen_prototype">
+    <p>Ahora se construirán los prototipos concretos para una camiseta de manga larga y otra de manga corta:</p>
+
+    <img src="../img/prototype-construc.png" alt="Creación de prototipos concretos." class="imagen_prototype">
+    <p>Por último, el método main hará de cliente y creará distintas camisetas tanto de manga larga como de manga corta a partir de prototipos:</p>
+
+    <img src="../img/prototype-end.png" alt="Código resultante al aplicar la clase singleton." class="imagen_prototype">
+
+    <h3>Referencia bibliográfica</h3>
+
+    <p><a href="https://programacion.net/articulo/patrones_de_diseno_v_patrones_de_creacion_prototipo_1005">Programacion, Prototype</a>
+
+  </section>
+  <footer>
+    <p>Un trabajo bien hecho por el alumnado del modulo de Entornos de Desarrollo. 2020</p>
+  </footer>
+</body>
+
+</html>
