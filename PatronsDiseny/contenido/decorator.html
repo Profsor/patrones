@@ -2,12 +2,11 @@
 <html lang="es">
 
 <head>
-
-  <title>Patrones de diseï¿½oo. Template</title>
+  <title>Patrones de diseño. Decorator</title>
   <link rel="stylesheet" href="../css/screen.css" type="text/css" media="all">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="author" content="Alberto">
-
+  <meta name="author" content="Jordi Codevila">
+  <meta charset="UTF-8">
 </head>
 
 <body>
@@ -58,53 +57,39 @@
 
 
     <p><a href="../index.html">Volver a la pagina principal</a></p>
-    <h1>Template Method</h1>
+    <h1>Decorator</h1>
 
+    <h3>Ámbito de uso</h3>
 
-  
+    <p>Disponemos de una herramienta para crear interfaces gráﬁcas, que permite añadir funcionalidades como bordes o barras de desplazamiento a cualquier componente de la interfaz.</p>
 
     <h3>Utilidad</h3>
 
-    <p>Nace de la necesidad de extender determinados comportamientos dentro de un mismo algoritmo por parte de diferentes entidades. Es decir, diferentes entidades tienen un comportamiento similar pero que difiere en determinados aspectos puntuales en función de la entidad concreta.</p>
+    <p> Se puede utilizar la herencia para extender las responsabilidades de la clase. Si optamos por esta solución, estaríamos haciendo un diseño inflexible (estático), ya que el cliente no puede controlar cuándo y cómo decorar el componente con esa propiedad.</p>
+	<p> Encapsular dentro de otro objeto, llamado Decorador, las nuevas responsabilidades.</p>
 
-    <h3>Como funciona</h3>
+    <h3>Cómo funciona</h3>
 
-    <p></p>
+    <li>
+	<ol>Añadir responsabilidades a objetos individuales de forma dinámica y transparente</ol>
+	<ol>Responsabilidades de un objeto pueden ser retiradas</ol>
+	<ol>Cuando la extensión mediante la herencia no es viable</ol>
+	<ol>Hay una necesidad de extender la funcionalidad de una clase, pero no hay razones para extenderlo a través de la herencia.</ol>
+	</li>
 
-    <h3>Explicación: </h3>
+    <h3>Ejemplo</h3>
 
-	    <img src="../img/template-method-clase.PNG" alt="Clase 2 Template Method." class="imagen_template_method">
-	    <h3>Main</h3>
-	    <img src="../img/template-method-main.PNG" alt="Main Template Method." class="imagen_template_method">
-		<h4>ClaseAbstracta.java</h4>
-		<img src="../img/template-method-clase-abstracta.PNG" alt="Main Template Method." class="imagen_template_method">
-		<h4>ClaseConcreta1.java</h4>
-		<img src="../img/template-method-clase-conecreta1.PNG" alt="Main Template Method." class="imagen_template_method">
-		<h4>ClaseConcreta2.java</h4>
-		<img src="../img/template-method-clase-conecreta2.PNG" alt="Main Template Method." class="imagen_template_method">
-		<h4>Resultado</h4>
-		<img src="../img/template-method-resultado.PNG" alt="Main Template Method." class="imagen_template_method">
-		
-	 <ul>
-         <li>En ClaseAbstracta se define el método plantilla obtener(), desde el que se llama a dos métodos definidos como abstractos (que serán implementados por las subclases).</li>
-         <li>En ClaseConcreta1 se implementan dichos métodos de forma que uno de ellos devuelve el número entero recibido como parámetro multiplicado por 100, y otro agregándole 10.</li>
-         <li>En ClaseConcreta2 se implementan de modo que lo devuelven multiplicado por 1000 y agregándole 100, respectivamente.</li>
-     </ul>
+    <p>Las siguientes imagenes muestran unos ejemplos de este patron</p>
 
-     <p>En ciertos casos será necesario que algunas subclases sobreescriban determinados métodos de la clase padre para agregar determinadas funcionalidades.</p>
-
-    <p>Por ejemplo, si queremos que ClaseConcreta sobreescriba el método mensaje() con el fin de que se muestre otro texto antes del ya definido en dicho método lo haríamos del siguiente modo:</p>
-
-    <p</p>
-
-    <img src="../img/template-method-clase-conecreta2-sobrescrito.PNG" alt="Clase 2 Template Method." class="imagen_template_method">
+   <img src="../img/1.png" class="imagen_patron">
+    <img src="../img/2.jpg" class="imagen_patron">
+    <img src="../img/3.png"  class="imagen_patron">
+    
 
 
-    <h3>Referencia bibliogrÃ¡fica</h3>
+    <h3>Referencia bibliográfica</h3>
 
-    <p><a href="https://www.adictosaltrabajo.com/2011/10/04/patron-template-method/">Miguel Arlandi, Adictos al trabajo</a>
-    <p><a href="https://informaticapc.com/patrones-de-diseno/template-method.php">Informatica PC</a>
-
+    <p><a href="https://es.wikipedia.org/wiki/Decorator_(patr%C3%B3n_de_dise%C3%B1o)">Wikipedia, patrón Decorator</a>
 
 
 
